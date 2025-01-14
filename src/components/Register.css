@@ -1,0 +1,9 @@
+/* responsiveness */
+@media screen and (max-width: 768px) {
+    .Form {
+        width: 70%;
+    }
+    .app-container {
+        margin-top: 60px;
+    }
+}

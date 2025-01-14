@@ -1,0 +1,147 @@
+/* Main container for reviews */
+.reviews-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    gap: 20px;
+    padding: 10px;
+}
+
+/* Review list layout */
+.reviews-main > ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    width: 70%; /* Main width of the reviews section */
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual review card styling */
+.reviews-main > ul > li {
+    max-width: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+    border: 2px solid #a7a7a7;
+    background-color: #37312A;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Review card images */
+.reviews-main > ul > li > img {
+    width: 100%;
+    max-width: 200px; /* Limit max image size */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.review-content {
+    max-width: 300px;   
+    word-wrap: break-word;
+}
+
+
+
+/* Review text details */
+.reviews-main > ul > li > h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.reviews-main > ul > li > p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+/* Movie Details Section */
+.reviews-main > ul > li > div {
+    margin-top: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+/* --- Responsive Adjustments --- */
+
+/* For tablets and small desktops (up to 1024px) */
+@media screen and (max-width: 1370px) {
+    .reviews-main > ul {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        gap: 15px;
+    }
+
+    .reviews-main > ul > li {
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .reviews-main > ul > li > h3 {
+        font-size: 1.2rem;
+    }
+
+    .reviews-main > ul > li > p {
+        font-size: 0.9rem;
+    }
+}
+
+/* For phones (up to 768px) */
+@media screen and (max-width: 800px) {
+    .reviews-main > ul {
+        grid-template-columns: 1fr; /* Single column */
+        gap: 10px;
+    }
+
+    .reviews-main > ul > li {
+        padding: 10px;
+    }
+
+    .reviews-main > ul > li > img {
+        width: 100%;
+        max-width: 150px; /* Smaller image size */
+        height: auto;
+    }
+
+    .reviews-main > ul > li > h3 {
+        font-size: 1rem;
+    }
+
+    .reviews-main > ul > li > p {
+        font-size: 0.85rem;
+    }
+}
+
+/* For extra small screens (up to 480px) */
+@media screen and (max-width: 480px) {
+    .reviews-main {
+        gap: 15px;
+    }
+
+    .reviews-main > ul {
+        width: 100%; /* Full width for smaller devices */
+        gap: 10px;
+    }
+
+    .reviews-main > ul > li {
+        padding: 8px;
+    }
+
+    .reviews-main > ul > li > img {
+        max-width: 120px; /* Reduce image size */
+    }
+
+    .reviews-main > ul > li > h3 {
+        font-size: 0.9rem;
+    }
+
+    .reviews-main > ul > li > p {
+        font-size: 0.75rem;
+    }
+}

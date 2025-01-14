@@ -1,0 +1,127 @@
+.create-group-container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  margin-top: 60px;
+  align-items: center;
+  height: 100vh;
+}
+
+.create-group-container h1 {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.create-group-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 40px 60px ;
+  border-radius: 30px;
+  box-shadow: 0 0 50px 1px rgba(208, 208, 208, 0.1);
+  background-color: rgba(27, 18, 3, 0.7);
+  width: 400px;
+  height: fit-content;
+}
+
+.create-group-form label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.create-group-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 18px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+}
+
+
+.create-group-form .form-textarea {
+  width: 90%;
+  height: 150px;
+  padding: 10px;
+  margin-top: 18px;
+  border-radius: 30px;
+  /* color: white; */
+  font-size: 1rem;
+  resize: none;
+  overflow-y: auto;
+}
+
+.create-group-form .form-textarea::placeholder {
+  color: #a0a0a0;
+  font-size: 0.8rem;
+}
+
+.create-group-form button {
+  width: 70%;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 30px;
+  border: none;
+  background-color: #7c6a4c;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+}
+
+.create-group-form button:hover {
+  background-color: #404040c7;
+}
+
+
+.success-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 10px;
+  font-size: 16px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: fadeInOut 2s;
+  text-align: center;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  10%,
+  90% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+}
+
+
+
+/* responsiveness */
+@media screen and (max-width: 768px) {
+  .create-group-container {
+    margin-top: 30px;
+  }
+  
+  .create-group-form {
+    width: 60%;
+  }
+
+}

@@ -1,0 +1,27 @@
+services:
+  db:
+    image: postgres:alpine
+    container_name: movie_db
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - ${DB_PORT}:${DB_CONTAINER_OUT_PORT}
+    volumes:
+      - movie_db_data:/var/lib/postgresql/data
+
+  test_db:
+    image: postgres:alpine
+    container_name: movie_test_db
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD} 
+      POSTGRES_DB: ${TEST_DB_NAME}
+    ports:
+      - ${TEST_DB_PORT}:${DB_CONTAINER_OUT_PORT}
+    volumes:
+      - test_db_data:/var/lib/postgresql/data
+volumes:
+  movie_db_data:
+  test_db_data:

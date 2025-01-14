@@ -1,0 +1,144 @@
+.showtimes-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    gap: 20px;
+    padding: 10px;
+}
+
+/* Adjust the dropdown width for smaller screens */
+.showtimes-con > select {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 400px; /* Limit max width for better usability */
+    height: 40px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #a7a7a7;
+    background-color: #282828;
+    color: #fff;
+}
+
+/* Main grid container */
+.showtimes-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    width: 70%;
+    gap: 20px;
+   
+    
+}
+
+.show-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    gap: 30px;
+    border: 2px solid #a7a7a7;
+    background-color: #37312A;
+    border-radius: 10px;
+}
+
+.show-item > img {
+    object-fit: fill;
+}
+
+.show-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-self: flex-start;
+    gap: 5px;
+}
+
+.show-details > h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* --- Responsive Adjustments --- */
+
+/* For tablets and small desktops (up to 1024px) */
+@media screen and (max-width: 1370px) {
+    .showtimes-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        gap: 15px;
+    }
+
+    .show-item {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .show-details > h3 {
+        font-size: 1.2rem;
+    }
+
+    .show-details > p {
+        font-size: 0.85rem;
+    }
+}
+
+/* For phones (up to 768px) */
+@media screen and (max-width: 800px) {
+    .showtimes-list {
+        grid-template-columns: 1fr; /* Single column */
+        gap: 10px;
+    }
+
+    .show-item {
+        flex-direction: column; /* Stack image and text */
+        text-align: center; /* Center align content */
+        padding: 10px;
+    }
+
+    .show-item > img {
+        width: 100%;
+        max-width: 150px; /* Limit image size */
+        height: auto;
+    }
+
+    .show-details {
+        align-items: center;
+        gap: 8px;
+    }
+
+    .show-details > h3 {
+        font-size: 1rem;
+    }
+
+    .show-details > p {
+        font-size: 0.8rem;
+    }
+}
+
+/* For extra small screens (up to 480px) */
+@media screen and (max-width: 480px) {
+    .showtimes-con {
+        gap: 15px; /* Reduce vertical spacing */
+    }
+
+    .showtimes-list {
+        width: 100%; /* Full width for smaller devices */
+        gap: 10px;
+    }
+
+    .show-item {
+        padding: 8px;
+    }
+
+    .show-item > img {
+        max-width: 120px;
+    }
+
+    .show-details > h3 {
+        font-size: 0.9rem;
+    }
+
+    .show-details > p {
+        font-size: 0.75rem;
+    }
+}

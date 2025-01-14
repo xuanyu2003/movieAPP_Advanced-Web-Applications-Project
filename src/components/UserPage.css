@@ -1,0 +1,243 @@
+.page-container {
+  background: conic-gradient(from 12.78deg at 28.99% 107.28%, 
+    rgba(25, 24, 23, 0.8) 0deg,  
+    rgba(99, 91, 72, 0.7) 120deg, 
+    rgba(25, 24, 23, 0.8) 260deg, 
+    rgba(69, 62, 56, 0.9) 360deg);
+
+    min-height: 90vh;
+}
+
+
+.user-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.user-display {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.user-icon {
+  font-size: 28px;
+  color: #ffffff; 
+  margin-right: 10px; 
+}
+
+.user-avatar {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  display: flex;               
+  align-items: center;   
+  width: 100%;     
+}
+
+.user-page h1 {
+  color: white;
+  font-size: 2.2rem;
+}
+
+.user-page p {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.logout-button {
+  background-color: rgba(92, 91, 91, 0.5); 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.logout-button:hover {
+  background-color: #555;
+}
+
+.remove-button {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  background-color: transparent;
+  color: rgba(146, 58, 58);
+  border: none;
+  font-size: 0.9rem;
+}
+
+.remove-button:hover {
+  color: #FF6347;
+}
+
+.user-page h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0; 
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.share-container {
+  display: flex; 
+  align-items: center;
+  margin-bottom: 8px; 
+  width: 100%;
+}
+
+.share-button {
+  cursor: pointer; 
+  font-size: 0.8rem; 
+  color: #ffffff; 
+  margin-left: auto;
+  display: flex;
+  align-items: center; 
+  justify-content: flex-end; 
+}
+
+.share-button:hover {
+  color: #c8c6c6;
+}
+
+.share-icon {
+  font-size: 15px; 
+  margin-right: 5px;
+}
+
+.favorite-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Favorite card container */
+.favorite-card {
+  background-color: rgba(55, 49, 42, 0.5);
+  border: 2px solid #a7a7a7;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  gap: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  justify-content: flex-start; 
+  max-height:140px;
+}
+
+.favorite-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+}
+
+.favorite-icon {
+  color: rgba(177, 177, 177, 0.73); 
+  font-size: 20px; 
+  margin-left: 20px;
+}
+
+.favorite-card img {
+  width: 90px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.favorite-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  text-align: left;
+  flex-grow: 1; /* Make content take up the remaining space */
+}
+
+.favorite-card-content h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.favorite-card-content p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+@media screen and (max-width: 1370px) {
+  .favorite-list {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .favorite-card {
+    gap: 15px;
+  }
+
+  .favorite-card img {
+    width: 100px;
+  }
+
+  .favorite-card-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .favorite-card-content p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logout-button {
+    font-size: 0.8rem;
+  }
+  .user-icon {
+    font-size: 25px;
+  }
+  .user-avatar {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  .user-display p {
+    font-size: 0.8rem;
+  }
+  .user-page h1 {
+    font-size: 1.2rem;
+  }
+  .user-page h2 {
+    font-size: 1.2rem;
+  }
+  .favorite-card img {
+    width: 80px;
+  }
+  .favorite-card-content h3 {
+    font-size: 1rem;
+    margin-bottom: 50px;
+  }
+  .favorite-card-content p {
+    font-size: 0.6rem;
+  }
+  .favorite-icon {
+    font-size: 15px;
+    margin-left: 10px;
+  }
+  .share-button {
+    font-size: 10px;
+  }
+  .share-icon {
+    font-size: 10px;
+    margin-right: 5px;
+  }
+}
